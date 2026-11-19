@@ -40,9 +40,10 @@ header nav a {
 }
 
 .promise {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #475569;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #172554;
 }
 
 .clinic-details {
