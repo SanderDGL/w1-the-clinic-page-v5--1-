@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <title>Campus Cycle Repair Clinic</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 2. Header met naam en werkende navigatie -->
+  <header>
+    <div class="logo">Campus Cycle</div>
+    <nav>
+      <a href="#info">Informatie</a>
+      <a href="#estimator">Prijs Berekenen</a>
+      <a href="#book">Boeken</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2 & 3. Hoofdkop, belofte en tijd/locatie -->
+    <section id="info">
+      <h1>Campus Cycle Saturday repair clinic.</h1>
+      <p class="promise">Wij garanderen dat je fiets binnen één uur weer veilig en rijklaar de weg op kan!</p>
+      
+      <div class="clinic-details">
+        <p><strong>Wanneer:</strong> Saturday, 15:00 to 17:00</p>
+        <p><strong>Waar:</strong> Workshop B, Student Centre</p>
+      </div>
+
+      <!-- 5. Afbeelding met nuttige alt-tekst -->
+      <img src="images/bicycle.png" alt="Een blauwe stadsfiets voor reparatie" class="hero-image">
+    </section>
+
+    <!-- 4, 8 & 9. Prijzenoverzicht en de Prijs-calculator -->
+    <section id="estimator" class="card">
+      <h2>Prijzen & Schatting</h2>
+      <p>Onze tarieven: Een controle kost EUR 10, elke kleine reparatie kost EUR 5, en een volledige service kost EUR 45.</p>
+      
+      <h3>Estimate your price</h3>
+      <label for="service">Service</label>
+      <select id="service">
+        <option value="10">A check</option>
+        <option value="45">A full service</option>
+      </select>
+
+      <label for="repairs">Number of small repairs</label>
+      <input id="repairs" type="number" min="0" step="1" value="0">
+
+      <p>Your estimate: <output id="total">EUR 10</output></p>
+    </section>
+
+    <!-- 6. Het Boekingsformulier -->
+    <section id="book" class="card">
+      <h2>Book a slot</h2>
+      <form id="booking">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="slot">Time slot</label>
+        <select id="slot" name="slot" required>
+          <option>15:00</option>
+          <option>15:30</option>
+          <option>16:00</option>
+          <option>16:30</option>
+        </select>
+
+        <button type="submit">Book this slot</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+  </main>
+
+  <!-- 11. Footer met persoonlijke code (of pas deze aan naar je eigen code indien nodig) -->
+  <footer>
+    <p>Campus Cycle · Personal code: BW-ZJ3Y</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* A small reset so the page starts consistently. Leave these three rules. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; color: #172554; background: #ffffff; }
+img { max-width: 100%; height: auto; }
+
+/* Your palette. Change the values, then use the variables below. */
+:root {
+  --accent: #1d4ed8;
+  --accent-soft: #eaf0fd;
+}
+
+/* Your styles start here. */
+/* Layout voor de hoofdcontainer */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 2. Header als een flex row */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  color: white;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.promise {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+.clinic-details {
+  background-color: #f8fafc;
+  border-left: 4px solid var(--accent);
+  padding: 10px 15px;
+  margin: 1.5rem 0;
+}
+
+.clinic-details p {
+  margin: 5px 0;
+}
+
+/* 5. Panel/card met padding en border met de variabelen */
+.card {
+  border: 2px solid var(--accent);
+  background-color: var(--accent-soft);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+/* Formulier & Input elementen styling */
+form, #estimator {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #b91c1c; /* Rode kleur voor de waarschuwing */
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+/* 11. Footer styling */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* 12. Verplichte regels voor telefoon/mobiele weergave onder de 40rem */
+@media (max-width: 40rem) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  input, select, button { 
+    max-width: 100%; 
+  }
+  
+  nav { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.5rem 1rem; 
+  }
+  
+  header, main, footer { 
+    padding: 0 1rem; 
+  }
+}
